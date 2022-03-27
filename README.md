@@ -1,1 +1,1 @@
-Space Hunter
+Semestrálni práce Space Hutner
