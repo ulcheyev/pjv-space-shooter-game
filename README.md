@@ -1,1 +1,0 @@
-Semestrálni práce Space Hutner
