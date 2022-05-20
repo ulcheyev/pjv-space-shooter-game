@@ -13,7 +13,10 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.logging.*;
 
-
+/**
+ * Game map.The class in which the creation, updating, painting of objects takes place
+ * @author ulcheyev
+ **/
 public class Space {
     private final static Logger logger = Logger.getLogger(Space.class.getName());
 
@@ -31,13 +34,23 @@ public class Space {
     private ArrayList<Item> items;
     private Inventory playerInventory;
     private Boss boss;
-    private double bossHealthCheck; // peremennaya dlya vzrblvov u bossa.
-    private boolean gameState = false; //peremennaya pokazivaet, chto igra eshte idet. Pri viigreshe ona budet true
 
-    //Data
     private int enemiesWave;
     private int enemiesQuantity;
 
+    //A variable for monitoring the boss health.
+    private double bossHealthCheck;
+
+    //A variable for monitoring the state of the game. True - not finished yet, False - finished
+    private boolean gameState = false;
+
+    /**
+     * Space initialize.Creating game objects.
+     * @param controller game controller
+     * @param boss boos type
+     * @param enemiesWave quantity of enemies wave
+     * @param enemiesQuantity quantity of enemies in every wave
+     **/
     public Space(GameController controller, BossType boss, int enemiesWave, int enemiesQuantity) {
         logger.log(Level.INFO, "Space initialize");
         this.controller = controller;
@@ -56,34 +69,9 @@ public class Space {
         items = new ArrayList<>();
     }
 
-
-
-
-    public void addExplosion(Explosion explosion) {explosions.add(explosion);}
-    public ArrayList<Bullet> getPlayerBullets() {
-        return this.playerBullets;
-    }
-    public MyBackground getBackground() {
-        return this.background;
-    }
-    public PlayerShip getPlayerShip() {
-        return this.playerShip;
-    }
-    public Inventory getPlayerInventory() {return playerInventory;}
-    public void setPlayerInventory(Inventory playerInventory) {this.playerInventory = playerInventory;}
-    public Boss getBoss() {
-        return boss;
-    }
-    public void setBoss(Boss boss) {
-        this.boss = boss;
-    }
-    public void playerBulletsAddBullet(Bullet bullet){playerBullets.add(bullet);}
-    public void enemyBulletsAddBullet(Bullet bullet){enemyBullets.add(bullet);}
-    public void setPlayerShip(PlayerShip playerShip) {this.playerShip = playerShip;}
-    public ArrayList<Bullet> getEnemyBullets() {return enemyBullets;}
-    public void setGameState(boolean gameState) {this.gameState = gameState;}
-    public ArrayList<Item> getItems() {return items;}
-
+    /**The method calls the painting method for all game objects
+     * @param graphicsContext - GraphicContext object from game scene
+     * **/
     public void paint(GraphicsContext graphicsContext) {
         background.paint(graphicsContext);
         if(playerShip != null){
@@ -110,6 +98,9 @@ public class Space {
         }
     }
 
+    /**The method calls the processing method for all game objects
+     * @throws InterruptedException
+     * **/
     public void update() throws InterruptedException {
         background.update();
         if(gameState == false) {
@@ -146,7 +137,9 @@ public class Space {
 
 
     //SET GAME LOST
-    //risuem vragov i proveryam na kolize s puley
+    //Update player ship
+    //Checking the ship for collisions with enemy bullets.
+    //Player ship health update
     private void checkingPlayerShip(PlayerShip playerShip, ArrayList<Bullet> enemyBullets){
         for (int i = 0; i < enemyBullets.size(); i++) {
             if (checkCollision(playerShip, enemyBullets.get(i))) {
@@ -169,8 +162,8 @@ public class Space {
         }
     }
 
-
-    //risuem vragov i proveryam na kolize s puley
+    //Update enemies
+    //Checking enemies for collisions with the player's bullets
     private void updateAndCheckingEnemies(ArrayList<Enemy> enemies, ArrayList<Bullet> playerBullets) {
         for (int i = 0; i < enemies.size(); i++) {
             enemies.get(i).update();
@@ -192,7 +185,8 @@ public class Space {
     }
 
 
-    //SET GAME WIN;
+    //SET GAME WIN
+    //Destroy enemies
     private void removeDestroyedEnemies(ArrayList<Enemy> enemies){
         for(int i = 0; i < enemies.size(); i++){
             if(enemies.get(i).getHealth() <= 0){
@@ -211,7 +205,7 @@ public class Space {
         }
     }
 
-    //risuem puli. udalyaem puli, kogda oni uhodyat za ramki
+    //Player bullet updating. Removing out-of-bounds bullets.
     private void updatePlayerBullets(ArrayList<Bullet> playerBullets){
         for (int i = 0; i < playerBullets.size(); i++) {
             playerBullets.get(i).update();
@@ -222,7 +216,7 @@ public class Space {
         }
     }
 
-    //risuem puli vragov. udalyaem puli, kogda oni uhodyat za ramki
+    //Enemies bullet updating. Removing out-of-bounds bullets.
     private void updateEnemiesBullets(ArrayList<Bullet> enemyBullets){
         for (int i = 0; i < enemyBullets.size(); i++) {
             enemyBullets.get(i).update();
@@ -233,7 +227,7 @@ public class Space {
         }
     }
 
-    //vybuchy
+    //Explosion updating
     private void updateExplosions(ArrayList<Explosion> explosions) {
         for (int i = 0; i < explosions.size(); i++) {
             explosions.get(i).update();
@@ -243,7 +237,7 @@ public class Space {
         }
     }
 
-
+    //Creating enemies
     private void enemiesCreate(ArrayList<Enemy> enemies, int enemiesQuantity, int enemiesWave){
         if(enemies.size() == 0) {
             if (enemiesWave != 0){
@@ -266,6 +260,7 @@ public class Space {
         }
     }
 
+    //Creating a boss
     private void bossSpawn(ArrayList<Enemy> enemies){
         playerBullets.clear();
         try {
@@ -279,7 +274,7 @@ public class Space {
     }
 
 
-
+    //Adding big explosions to the boss when he loses a certain amount of health
     private void bossBigExplosionAdd(Boss boss){
         if (boss.getHealth() <= bossHealthCheck - 1) {
             updateMultiShotBar();
@@ -291,21 +286,25 @@ public class Space {
         }
     }
 
+    //Spawn random bonus
     private void getRandomBonus(double x, double y){
-        Item bonus;
-        int rand = random.nextInt(6);
-        if(rand == 1){
-            bonus = new ShootItem(controller, x, y, 500);
+        int r = random.nextInt(4);
+        if(r == 2) {
+            Item bonus;
+            int rand = random.nextInt(6);
+            if (rand == 1) {
+                bonus = new ShootItem(controller, x, y, 0.25);
+            } else if (rand == 2 || rand == 3) {
+
+                bonus = new HPItem(controller, x, y);
+            } else {
+                bonus = new SpeedItem(controller, x, y);
+            }
+            items.add(bonus);
         }
-        else  if(rand == 2 || rand == 3){
-            bonus = new HPItem(controller, x, y);
-        }
-        else {
-            bonus = new SpeedItem(controller, x, y);
-        }
-        items.add(bonus);
     }
 
+    //Update items
     private void updateItems(ArrayList<Item> items){
         for(int i = 0; i < items.size(); i++){
             if(items.get(i).getAttribute() != 0) {
@@ -320,6 +319,11 @@ public class Space {
     }
 
 
+    /**
+     * The method checks for a collision between two objects
+     * @param object1 - object N1
+     * @param object2 - object N2
+     * **/
     public boolean checkCollision(GameObject object1, GameObject object2){
         if(object1.getRectangle().getBoundsInParent().intersects(object2.getRectangle().getBoundsInParent())){
             return true;
@@ -328,16 +332,24 @@ public class Space {
         }
     }
 
+    //Updating player ship hp bar
     private void updateHpBar(){
         controller.setHPBarProgress(playerShip.getHealth() + 0.05);
     }
 
+    //Updating player ship multi shot bar
     private void updateMultiShotBar(){
         if(controller.getAllowToFillMultiShotBar() == true){
             controller.setMultiShotProgress(controller.getMultiShotProgress() + 0.2);
         }
     }
 
+    /**
+     * The method adds an explosion depending on the input parameter (explosion type)
+     * @param type - explosion type
+     * @param x - x coordinate
+     * @param y - y coordinate
+     * **/
     public void explosionAdd(ExplosionType type, double x, double y){
         switch (type){
             case HIT -> {
@@ -353,6 +365,94 @@ public class Space {
             }
         }
     }
+
+    //Player ship getters and setters
+    /**Returns player ship
+     * @return Player ship
+     **/
+    public PlayerShip getPlayerShip() {return this.playerShip;}
+
+    /**Returns player inventory
+     * @return Player inventory
+     **/
+    public Inventory getPlayerInventory() {return playerInventory;}
+
+    /**Returns list of player bullets
+     * @return list of player bullets
+     **/
+    public ArrayList<Bullet> getPlayerBullets() {return this.playerBullets;}
+
+    /**Add bullet to player bullets list
+     * @param  bullet bullet to add
+     **/
+    public void playerBulletsAddBullet(Bullet bullet){playerBullets.add(bullet);}
+
+    /**Sets player inventory
+     * @param  playerInventory inventory to set
+     **/
+    public void setPlayerInventory(Inventory playerInventory) {this.playerInventory = playerInventory;}
+
+    /**Sets player ship
+     * @param  playerShip Player ship to set
+     **/
+    public void setPlayerShip(PlayerShip playerShip) {this.playerShip = playerShip;}
+
+    /**Returns list of inventory items
+     * @return  list of items
+     **/
+    public ArrayList<Item> getItems() {return items;}
+
+
+
+
+    //ENEMIES GETTERS AND SETTERS
+
+    /**Returns quantity of enemies wave
+     * @return quantity of enemies wave
+     **/
+    public int getEnemiesWave() {return enemiesWave;}
+
+    /**Returns quantity of enemies in every wave
+     * @return quantity of enemies in every wave
+     **/
+    public int getEnemiesQuantity() {return enemiesQuantity;}
+
+    /**Returns boss
+     * @return Boss
+     **/
+    public Boss getBoss() {return boss;}
+
+
+    /**Sets boss
+     * @param  boss Boss
+     **/
+    public void setBoss(Boss boss) {this.boss = boss;}
+
+    /**Add bullet to enemies bullets list
+     * @param  bullet bullet to add
+     **/
+    public void enemyBulletsAddBullet(Bullet bullet){enemyBullets.add(bullet);}
+
+    /**Returns list of enemies bullets
+     * @return  List of enemies bullets
+     **/
+    public ArrayList<Bullet> getEnemyBullets() {return enemyBullets;}
+
+    /**Sets game state
+     * @param  gameState game state to set. True-finished, False-not finished.
+     **/
+    public void setGameState(boolean gameState) {this.gameState = gameState;}
+
+
+
+
+    //OTHER COMPONENTS
+    /**Returns space background
+     * @return Space background
+     **/
+    public MyBackground getBackground() {return this.background;}
+
+
 
 
 

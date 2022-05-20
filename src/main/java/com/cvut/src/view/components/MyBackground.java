@@ -3,10 +3,12 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-
+/**
+ * The VIEW that represents background image.
+ * @author ulcheyev
+ **/
 public class MyBackground {
     private static final String IMG_PATH_BACKGROUND = "/space1.png";
-
 
     private Image img;
     private Renderparam imgN1Param;
@@ -15,7 +17,9 @@ public class MyBackground {
     private ImageView viewImgN2;
     private float moveSpeed = 1.5f;
 
-
+    /**
+     * Background initialize
+     **/
     public MyBackground(){
         this.img = new Image(getClass().getResourceAsStream(IMG_PATH_BACKGROUND));
         viewImgN1 = new ImageView(img);
@@ -24,17 +28,17 @@ public class MyBackground {
         this.imgN2Param  = new Renderparam(0,img.getHeight(), img.getWidth(), img.getHeight());
     }
 
-    public Image getImg() {return img;}
-
-    public ImageView getViewImgN1() {return viewImgN1;}
-    public ImageView getViewImgN2() {return viewImgN2;}
-    public float getMoveSpeed() {return moveSpeed;}
-
+    /**
+     * The method paint background on game scene graphic context
+     **/
     public void paint(GraphicsContext gc){
         gc.drawImage(img,0, imgN1Param.getY());
         gc.drawImage(img,0, imgN2Param.getY());
     }
 
+    /**
+     * The method update background position depending on its move speed
+     **/
     public void update(){
         imgN1Param.setY(imgN1Param.getY() + moveSpeed);
         imgN2Param.setY(imgN2Param.getY() + moveSpeed);
@@ -45,5 +49,29 @@ public class MyBackground {
             imgN2Param.setY(img.getHeight() * (-1));
         }
     }
+
+    /**
+     * Returns background image
+     * @return image of the background
+     **/
+    public Image getImg() {return img;}
+
+    /**
+     * Returns background image view
+     * @return image view of the background
+     **/
+    public ImageView getViewImgN1() {return viewImgN1;}
+
+    /**
+     * Returns background image view
+     * @return image view of the background
+     **/
+    public ImageView getViewImgN2() {return viewImgN2;}
+
+    /**
+     * Returns background move speed
+     * @return background move speed
+     **/
+    public float getMoveSpeed() {return moveSpeed;}
 
 }

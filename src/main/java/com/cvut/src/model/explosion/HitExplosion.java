@@ -5,10 +5,18 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+/**
+ * The class represents a Hit Explosion that appears after hitting object
+ * @author ulcheyev
+ **/
 public class HitExplosion extends Explosion {
     private final String IMG_PATH = "/exp2.png";
 
-
+    /**
+     * Initialize Hit Explosion
+     * @param x x coordinate
+     * @param y y coordinate
+     **/
     public HitExplosion(double x, double y) {
         this.renderParam = new Renderparam();
         this.renderParam.setX(x);

@@ -17,7 +17,10 @@ import javafx.stage.Stage;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * Component of VIEW which representing a my ship menu.
+ * @author ulcheyev
+ **/
 public class MyShipMenu {
     private final static Logger logger = Logger.getLogger(MyShipMenu.class.getName());
 
@@ -32,6 +35,11 @@ public class MyShipMenu {
     private Image backGroundImage;
 
 
+    /**
+     * Initialize my ship menu. Draws my ship menu components.
+     * @param controller game controller
+     * @param stage main stage of the game
+     **/
     public MyShipMenu(GameController controller, Stage stage){
         logger.log(Level.INFO, "My ship menu initialize");
         this.controller = controller;
@@ -52,6 +60,11 @@ public class MyShipMenu {
         secondBox = createChoosenPaneShipN2(secondImage, 620, 350);
     }
 
+    /**
+     * Draws a background with a image on a certain pane
+     * @param pane pane, where background will be drawn
+     * @param back background to draw
+     **/
     public void drawBackgroundOnPane(AnchorPane pane, Image back){
         BackgroundImage backGroundImage = new BackgroundImage(back,  BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
@@ -61,13 +74,13 @@ public class MyShipMenu {
         pane.setBackground(background);
     }
 
-    public void createBackButton(){
+    private void createBackButton(){
         MyButton backButton = new MyButton("Back", 5, 890);
         backButton.setLayoutX(backButton.getPosition().getX());
         backButton.setLayoutY(backButton.getPosition().getY());
-        backButton.setOnAction(new EventHandler<ActionEvent>() {
+        backButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(MouseEvent event) {
                 controller.setMainMenu();
             }
         });
@@ -75,13 +88,13 @@ public class MyShipMenu {
     }
 
 
-    public void createPlayButton(){
+    private void createPlayButton(){
         MyButton nextButton = new MyButton("Play!", 645, 890);
         nextButton.setLayoutX(nextButton.getPosition().getX());
         nextButton.setLayoutY(nextButton.getPosition().getY());
-        nextButton.setOnAction(new EventHandler<ActionEvent>() {
+        nextButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(MouseEvent event) {
                 if(choosen) {
                     removeBorder(firstBox);
                     removeBorder(secondBox);
@@ -100,7 +113,7 @@ public class MyShipMenu {
 
 
 
-    public VBox createChoosenPaneShipN1(Image image, double x, double y){
+    private VBox createChoosenPaneShipN1(Image image, double x, double y){
         VBox box = new VBox();
         ImageView view = new ImageView(image);
         box.getChildren().add(view);
@@ -119,7 +132,7 @@ public class MyShipMenu {
         return box;
     }
 
-    public VBox createChoosenPaneShipN2(Image image, double x, double y){
+    private VBox createChoosenPaneShipN2(Image image, double x, double y){
         VBox box = new VBox();
         ImageView view = new ImageView(image);
         box.getChildren().add(view);
@@ -139,24 +152,28 @@ public class MyShipMenu {
 
     }
 
-    public void setBorder(VBox box){
+    private void setBorder(VBox box){
         box.setStyle("-fx-border-style: solid inside;" +
                 "-fx-border-color: orange;" +
                 "-fx-border-width: 3;");
     }
 
-    public void removeBorder(VBox box){
+    private void removeBorder(VBox box){
         box.setStyle(null);
     }
 
 
-    public void setLogo(Image image, double posX, double posY){
+    private void setLogo(Image image, double posX, double posY){
         ImageView view = new ImageView(image);
         myShipPane.getChildren().add(view);
         view.setLayoutX(posX);
         view.setLayoutY(posY);
     }
 
+    /**
+     * Returns my ship menu scene
+     * @return my ship menu scene
+     **/
     public Scene getMyShipScene() {
         return myShipScene;
     }

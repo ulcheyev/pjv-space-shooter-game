@@ -5,11 +5,23 @@ import com.cvut.src.view.GameView;
 import javafx.scene.image.Image;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * The class represents third enemy type
+ * @author ulcheyev
+ **/
 public class EnemyGreen extends Enemy {
-
     private final String IMG_PATH = "/enemy_green.png";
+
+    //Moving diagonally
     private double dirY;
 
+
+    /**
+     * Initialize EnemyGreen. Determination of maximum values for movement. Set up parameters.
+     * @param controller game controller
+     * @param x x coordinate
+     * @param y y coordinate
+     **/
     public EnemyGreen(GameController controller, int x, int y) {
         super(controller);
         this.controller = controller;
@@ -42,6 +54,9 @@ public class EnemyGreen extends Enemy {
         }
     }
 
+    /**
+     * The method creates the logic of the enemy's movement.
+     **/
     private void enemyMoveLogic() {
         if(acccessToMoveDependingOnTheHour == true){
             if(route == true){

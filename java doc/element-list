@@ -1,0 +1,15 @@
+module:com.cvut.spacehunter
+com.cvut.src
+com.cvut.src.controller
+com.cvut.src.managers
+com.cvut.src.model
+com.cvut.src.model.bonusItem
+com.cvut.src.model.bullet
+com.cvut.src.model.bullet.ammo
+com.cvut.src.model.bullet.rocket
+com.cvut.src.model.enemy
+com.cvut.src.model.explosion
+com.cvut.src.model.player
+com.cvut.src.model.player.ship
+com.cvut.src.view
+com.cvut.src.view.components

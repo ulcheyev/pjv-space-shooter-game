@@ -5,9 +5,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
-
+/**
+ * Class representing any ammunition in the game
+ * @author ulcheyev
+ **/
 public interface Bullet extends GameObject {
-
      Image getImg();
      double getDamage();
      void setDamage(double damage);
@@ -15,7 +17,7 @@ public interface Bullet extends GameObject {
      void setImgParam(Renderparam imgParam);
      ImageView getImageView();
      double getSpeedMove();
-      void update();
-      void paint(GraphicsContext graphicsContext);
+     void update();
+     void paint(GraphicsContext graphicsContext);
      Rectangle getRectangle();
 }

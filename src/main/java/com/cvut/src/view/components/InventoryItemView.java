@@ -19,18 +19,30 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 import java.util.ArrayList;
-
+/**
+ * Class representing an item in the inventory.
+ * @author ulcheyev
+ **/
 public class InventoryItemView {
-    private transient GameController controller;
+    private GameController controller;
     private Item item;
     private Label label;
 
+    /**
+     * Initialize item in inventory
+     * @param item item to put to inventory
+     * @param controller game controller
+     **/
     public InventoryItemView(Item item, GameController controller){
         this.label = new Label();
         this.item = item;
         this.controller  = controller;
     }
 
+    /**
+     The method creates an item in the inventory, adds a label to it, and adds other styles
+     @return return group with item image and its label quantity
+     **/
     public Group makeInventoryItem(){
         Group itemInInventory = new Group();
         label.setFont(Font.font("Courier", FontWeight.BOLD, 15)); // set to Label
@@ -43,9 +55,10 @@ public class InventoryItemView {
         itemInInventory.setLayoutX(item.getRenderParam().getX());
         return itemInInventory;
     }
-
+    /**
+     The method updates label of this item
+     **/
     public void update(){this.label.setText(String.valueOf(this.item.getQuantity()));}
-
 
 }
 

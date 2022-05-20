@@ -8,8 +8,12 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
-
+/**
+ * Component of VIEW which representing button.
+ * @author ulcheyev
+ **/
 public class MyButton extends Button {
+
     private final String FONT_PATH = "/menu_res/Prototype.ttf";
     private final String IMG_PATH = "/menu_res/button.png";
     private Renderparam position;
@@ -18,8 +22,14 @@ public class MyButton extends Button {
                                           BackgroundRepeat.NO_REPEAT,
                                           BackgroundPosition.DEFAULT,
                                           BackgroundSize.DEFAULT);
-    Background background = new Background(backGroundImage);
+    private Background background = new Background(backGroundImage);
 
+    /**
+     * Button initialize
+     * @param text text on button
+     * @param x x coordinate
+     * @param y y coordinate
+     **/
     public MyButton(String text, int x, int y){
         position = new Renderparam(x, y);
         setText(text);
@@ -57,5 +67,10 @@ public class MyButton extends Button {
         });
     }
 
+    /**
+     * Returns button position
+     * @return button position
+     **/
     public Renderparam getPosition() {return position;}
+
 }

@@ -6,6 +6,11 @@ import javafx.scene.input.KeyEvent;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * Class representing the inventory where bonus items are stored
+ * @author ulcheyev
+ **/
+
 public class Inventory implements Serializable{
     private ArrayList<Item> items;
 
@@ -14,6 +19,10 @@ public class Inventory implements Serializable{
     private  SpeedItem speed;
     private  ShootItem shoot;
 
+    /**
+     * Initialize Inventory. Add items to inventory.
+     * @param controller game controller
+     **/
     public Inventory(GameController controller){
         items = new ArrayList<>();
         hp = new HPItem(controller, 930, 810);
@@ -24,6 +33,10 @@ public class Inventory implements Serializable{
         items.add(shoot);
     }
 
+    /**
+     * Increase certain item quantity
+     * @param item item which quantity will be increased
+     **/
     public  void increaseItemQuantity(Item item){
         if (item instanceof HPItem) {
             hp.quantity = hp.quantity + 1;
@@ -34,6 +47,10 @@ public class Inventory implements Serializable{
         }
     }
 
+    /**
+     * Decrease certain item quantity
+     * @param item item which quantity will be decreased
+     **/
     public  void decreaseItemQuantity(Item item){
         if (item instanceof HPItem) {
             hp.quantity = hp.quantity - 1;
@@ -44,6 +61,10 @@ public class Inventory implements Serializable{
         }
     }
 
+    /**
+     * Method activates  bonuses depending on the keys pressed
+     * @param e key event
+     **/
     public void keyPressed(KeyEvent e) {
         if (e.getCode() == KeyCode.DIGIT1) {
             hp.activateBonus();
@@ -56,15 +77,10 @@ public class Inventory implements Serializable{
         }
     }
 
-    public  int getHpItemQuantity(){return hp.quantity;}
-
-    public  int getSpeedItemQuantity(){return speed.quantity;}
-
-    public  int getShootItemQuantity(){return shoot.quantity;}
-
-    public ArrayList<Item> getItems() {return items;}
-
-
+    /**
+     * Method set items to inventory
+     * @param items to set
+     **/
     public void setItems(ArrayList<Item> items) {
        for (Item item: items){
            if (item instanceof HPItem) {
@@ -78,22 +94,52 @@ public class Inventory implements Serializable{
        }
     }
 
+    /**
+     * Return HP item from inventory
+     * @return  hp item
+     **/
     public HPItem getHp() {
         return hp;
     }
-    public void setHp(HPItem hp) {
-        this.hp = hp;
-    }
+
+    /**
+     * Return Speed item from inventory
+     * @return  speed item
+     **/
     public SpeedItem getSpeed() {
         return speed;
     }
-    public void setSpeed(SpeedItem speed) {
-        this.speed = speed;
-    }
+
+    /**
+     * Return Shoot item from inventory
+     * @return  shoot item
+     **/
     public ShootItem getShoot() {
         return shoot;
     }
-    public void setShoot(ShootItem shoot) {
-        this.shoot = shoot;
-    }
+
+
+    /**
+     * Return HP item quantity from inventory
+     * @return  hp item quantity
+     **/
+    public  int getHpItemQuantity(){return hp.quantity;}
+
+    /**
+     * Returns Speed item quantity from inventory
+     * @return  speed item quantity
+     **/
+    public  int getSpeedItemQuantity(){return speed.quantity;}
+
+    /**
+     * Returns Shoot item quantity from inventory
+     * @return  shoot item quantity
+     **/
+    public  int getShootItemQuantity(){return shoot.quantity;}
+
+    /**
+     * Returns all items  from inventory
+     * @return  all items quantity
+     **/
+    public ArrayList<Item> getItems() {return items;}
 }

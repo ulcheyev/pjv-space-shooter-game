@@ -11,13 +11,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+/**
+ * The VIEW component that representing the main menu.
+ * @author ulcheyev
+ **/
 public class MainMenu{
     private final static Logger logger = Logger.getLogger(MainMenu.class.getName());
 
@@ -28,7 +32,9 @@ public class MainMenu{
     private Image backGroundImage;
     private Image logo;
 
-
+    /**
+     * Main Menu initialize. Creates all components.
+     **/
     public MainMenu(GameController controller, Stage stage){
         logger.log(Level.INFO, "Main menu initialize");
         this.controller = controller;
@@ -46,7 +52,11 @@ public class MainMenu{
         createMenuExitButton();
     }
 
-
+    /**
+     * Draws a background with a image on a certain pane
+     * @param pane pane, where background will be drawn
+     * @param back background to draw
+     **/
     public void drawBackgroundOnPane(AnchorPane pane, Image back){
         BackgroundImage backGroundImage = new BackgroundImage(back,  BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
@@ -56,33 +66,34 @@ public class MainMenu{
         pane.setBackground(background);
     }
 
-    public void drawButtonOnPane(AnchorPane pane, Button button, int posX, int posY){
-        pane.getChildren().add(button);
-        button.setLayoutX(posX);
-        button.setLayoutY(posY);
-    }
-
-    public void drawLogoOnPane(AnchorPane pane, Image logo, int posX, int posY){
+    /**
+     * Draws a logo on a certain pane
+     * @param pane pane, where logo will be drawn
+     * @param logo logo to draw
+     * @param posX x coordinate
+     * @param posY y coordinate
+     **/
+    private void drawLogoOnPane(AnchorPane pane, Image logo, int posX, int posY){
         ImageView view = new ImageView(logo);
         pane.getChildren().add(view);
         view.setLayoutX(posX);
         view.setLayoutY(posY);
     }
 
-    public void createLoadButton(){
+    //Create load button
+    private void createLoadButton(){
         MyButton loadButton = new MyButton("Load game", 50, 760);
         loadButton.setLayoutX(loadButton.getPosition().getX());
         loadButton.setLayoutY(loadButton.getPosition().getY());
 
-        loadButton.setOnAction(new EventHandler<ActionEvent>() {
+        loadButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
-                if(SaveManager.isEmpty() == false) {
+            public void handle(MouseEvent event) {
+                if (SaveManager.isEmpty() == false) {
                     controller.loadGame();
-                }else {
+                } else {
                     controller.showErrorMessage("No saves found :(");
                 }
-
             }
         });
         menuPane.getChildren().add(loadButton);
@@ -90,14 +101,14 @@ public class MainMenu{
 
 
 
-
-   public void createStartButton(){
+    //Create start button
+    private void createStartButton(){
         MyButton startButton = new MyButton("Start game", 50, 690);
         startButton.setLayoutX(startButton.getPosition().getX());
         startButton.setLayoutY(startButton.getPosition().getY());
-        startButton.setOnAction(new EventHandler<ActionEvent>() {
+        startButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(MouseEvent event) {
                 if(controller.getChoosenShip() == null){
                     controller.setMyShipMenu();
                 }else{
@@ -113,29 +124,30 @@ public class MainMenu{
    }
 
 
-
-    public void createMyShipButton(){
+    //Create my ship button
+    private void createMyShipButton(){
         MyButton myShipButton = new MyButton("My ship", 50, 830);
         myShipButton.setLayoutX(myShipButton.getPosition().getX());
         myShipButton.setLayoutY(myShipButton.getPosition().getY());
 
-        myShipButton.setOnAction(new EventHandler<ActionEvent>() {
+        myShipButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(MouseEvent event) {
                 controller.setMyShipMenu();
             }
         });
         menuPane.getChildren().add(myShipButton);
     }
 
-    public void createMenuExitButton(){
+    //Create exit button
+    private void createMenuExitButton(){
         MyButton exitButton = new MyButton("Exit game", 50, 900);
         exitButton.setLayoutX(exitButton.getPosition().getX());
 
         exitButton.setLayoutY(exitButton.getPosition().getY());
-        exitButton.setOnAction(new EventHandler<ActionEvent>() {
+        exitButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(MouseEvent event) {
                 logger.log(Level.INFO, "Game close");
                 mainStage.close();
                 Platform.exit();
@@ -146,5 +158,8 @@ public class MainMenu{
 
     }
 
+    /**
+     * Returns menu scene
+     **/
     public Scene getMenuScene() {return menuScene;}
 }

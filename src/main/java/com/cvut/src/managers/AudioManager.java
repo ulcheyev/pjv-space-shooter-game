@@ -1,19 +1,13 @@
 package com.cvut.src.managers;
-
-import com.cvut.src.view.components.MyShipMenu;
-import javafx.fxml.Initializable;
 import javafx.scene.media.*;
-import javafx.util.Duration;
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.FloatControl;
-import java.io.File;
 import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * The class to play sounds and music
+ * @author ulcheyev
+ **/
 public class AudioManager  implements Runnable{
     private final static Logger logger = Logger.getLogger(AudioManager.class.getName());
 
@@ -22,6 +16,10 @@ public class AudioManager  implements Runnable{
     private String soundName;
     private AudioClip mediaPlayer2;
 
+    /**
+     * Initialize AudioManager class and play sound
+     * @param name sound name
+     **/
     public AudioManager(String name){
         this.soundName = name;
         try {
@@ -32,6 +30,7 @@ public class AudioManager  implements Runnable{
         }
     }
 
+    //Method load sound and play it
     private void init() throws URISyntaxException {
         mediaView = new MediaView();
         switch (soundName.toUpperCase()){
@@ -60,17 +59,18 @@ public class AudioManager  implements Runnable{
         mediaPlayer2.setVolume(60);
     }
 
-    public void playMusic() throws URISyntaxException {
+    //Method which is called by thread. Plays selected sound
+    private void playMusic() throws URISyntaxException {
         mediaPlayer2.play();
     }
 
-
+    /**Plays select sound infinite times**/
     public void setInfiniteLoop(){
         mediaPlayer2.setCycleCount(AudioClip.INDEFINITE);
     }
 
 
-
+    /**Run thread**/
     @Override
     public void run() {
         try {

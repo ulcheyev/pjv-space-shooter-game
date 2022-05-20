@@ -7,8 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * The main class. Entry point to the program
+ * @author ulcheyev
+ **/
 public class Main extends Application {
-
 
     @Override
     public void start(Stage primaryStage) throws IOException {

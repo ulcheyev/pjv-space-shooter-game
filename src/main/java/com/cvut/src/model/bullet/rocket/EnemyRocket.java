@@ -9,6 +9,12 @@ import javafx.scene.shape.Rectangle;
 public class EnemyRocket extends Rocket{
     private final String IMG_PATH = "/boss_rocket.png";
 
+    /**
+     * Initialize Enemy Rocket
+     * @param x x coordinate to spawn
+     * @param y y coordinate to spawn
+     * @param damage damage of this rocket
+     **/
     public EnemyRocket(double damage, double x, double y) {
         this.speedMove = 6;
         img = new Image(getClass().getResourceAsStream(IMG_PATH));
@@ -23,7 +29,7 @@ public class EnemyRocket extends Rocket{
     @Override
     public  void paint(GraphicsContext graphicsContext) {graphicsContext.drawImage(img, bulletParam.getX(), bulletParam.getY(), img.getWidth(), img.getHeight());}
 
-    //metoda vrati objekt typu rerctangle pro zjisteni kolize mezi objekty pri strileni
+    @Override
     public Rectangle getRectangle(){
         Rectangle rectangle = new Rectangle(bulletParam.getX(), bulletParam.getY(), bulletParam.getWidth(), bulletParam.getHeight());
         return rectangle;

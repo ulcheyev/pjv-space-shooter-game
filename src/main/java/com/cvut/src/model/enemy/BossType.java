@@ -1,5 +1,9 @@
 package com.cvut.src.model.enemy;
 
+/**
+ * The class represents boss ship types
+ * @author ulcheyev
+ **/
 public enum BossType {
     TITAN("/boss1.png", 1, 2, 1), PREDATOR("/bossn.png", 1, 2, 1);
 
@@ -8,6 +12,13 @@ public enum BossType {
     private double health;
     private double moveSpeed;
 
+    /**
+     * Initialize boss type
+     * @param imgPath image path
+     * @param damage boss's damages
+     * @param health boss's health
+     * @param moveSpeed boss's move speed
+     **/
     BossType(String imgPath, double damage, double health, double moveSpeed) {
         this.imgPath = imgPath;
         this.damage = damage;
@@ -15,12 +26,29 @@ public enum BossType {
         this.moveSpeed = moveSpeed;
     }
 
+    /** Returns image of this boss
+     * @return boss's image
+     **/
     public String getImgPath() {return imgPath;}
-    public void setImgPath(String imgPath) {this.imgPath = imgPath;}
+
+    /** Returns damage of this boss
+     * @return boss's damage
+     **/
     public double getDamage() {return damage;}
+
+    /** Sets boss's damage
+     * @param  damage damage to set
+     **/
     public void setDamage(double damage) {this.damage = damage;}
+
+    /** Returns boss's health
+     * @return  boss's health
+     **/
     public double getHealth() {return health;}
-    public void setHealth(double health) {this.health = health;}
+
+    /** Returns boss's move speed
+     * @return  boss's speed
+     **/
     public double getMoveSpeed() {return moveSpeed;}
-    public void setMoveSpeed(double moveSpeed) {this.moveSpeed = moveSpeed;}
+
 }

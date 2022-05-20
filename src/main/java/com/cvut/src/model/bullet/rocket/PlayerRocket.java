@@ -6,9 +6,19 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * Class representing a rocket thats is Shoot item bonus
+ * @author ulcheyev
+ **/
 public class PlayerRocket extends Rocket {
     private final String IMG_PATH = "/player_rocket.png";
 
+    /**
+     * Initialize Player Rocket
+     * @param x x coordinate to spawn
+     * @param y y coordinate to spawn
+     * @param damage damage of this rocket
+     **/
     public PlayerRocket(double damage, double x, double y) {
         this.speedMove = 7;
         img = new Image(getClass().getResourceAsStream(IMG_PATH));
@@ -23,7 +33,7 @@ public class PlayerRocket extends Rocket {
     @Override
     public  void paint(GraphicsContext graphicsContext) {graphicsContext.drawImage(img, bulletParam.getX(), bulletParam.getY(), img.getWidth(), img.getHeight());}
 
-    //metoda vrati objekt typu rerctangle pro zjisteni kolize mezi objekty pri strileni
+    @Override
     public Rectangle getRectangle(){
         Rectangle rectangle = new Rectangle(bulletParam.getX(), bulletParam.getY(), bulletParam.getWidth(), bulletParam.getHeight());
         return rectangle;

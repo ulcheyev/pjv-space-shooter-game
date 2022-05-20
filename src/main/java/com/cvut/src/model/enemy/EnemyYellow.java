@@ -6,10 +6,20 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * The class represents first enemy type
+ * @author ulcheyev
+ **/
 public class EnemyYellow extends Enemy {
 
     private final String IMG_PATH = "/enemy_yellow.png";
 
+    /**
+     * Initialize EnemyYellow. Determination of maximum values for movement. Set up parameters.
+     * @param controller game controller
+     * @param x x coordinate
+     * @param y y coordinate
+     **/
     public EnemyYellow(GameController controller, int x, int y) {
         super(controller);
         this.controller = controller;
@@ -52,7 +62,9 @@ public class EnemyYellow extends Enemy {
 
 
 
-
+    /**
+     * The method creates the logic of the enemy's movement.
+     **/
     public void enemyMoveLogic(){
         if(acccessToMoveDependingOnTheHour == true){
             if(route == true){

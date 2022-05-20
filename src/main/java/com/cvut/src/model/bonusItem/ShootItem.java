@@ -1,7 +1,5 @@
 package com.cvut.src.model.bonusItem;
-
 import com.cvut.src.controller.GameController;
-import com.cvut.src.model.bullet.Bullet;
 import com.cvut.src.model.bullet.rocket.PlayerRocket;
 import com.cvut.src.model.bullet.rocket.Rocket;
 import com.cvut.src.view.components.Renderparam;
@@ -10,18 +8,32 @@ import javafx.scene.image.ImageView;
 
 import java.io.Serializable;
 
-public class ShootItem extends Item implements Serializable {
+/**
+ * Class representing the Shoot bonus item (Rocket)
+ * @author ulcheyev
+ **/
+public class ShootItem extends Item {
     private  final String IMG_PATH = "/items/Rocket_Bonus.png";
-    private  int damage;
 
-    public ShootItem(GameController controller, double x, double y, int damage){
+    /**
+     * Initialize Shoot bonus item
+     * @param controller game controller
+     * @param x x coordinate to spawn
+     * @param y y coordinate to spawn
+     * @param damage damage of this bonus item
+     **/
+    public ShootItem(GameController controller, double x, double y, double damage){
         this.controller = controller;
         this.img = new Image(getClass().getResourceAsStream(IMG_PATH));
         this.renderParam = new Renderparam(x, y);
         this.view = new ImageView(this.img);
+        this.attribute = damage;
     }
 
 
+    /**
+     * The method activate item bonus and gives bonus to the player ship.
+     **/
     @Override
     public void activateBonus() {
         if (controller.getGameSpace().getPlayerInventory().getShootItemQuantity() >= 1) {
@@ -35,6 +47,9 @@ public class ShootItem extends Item implements Serializable {
 
     }
 
+    /** Returns image path
+     * @return image path
+     **/
     @Override
     public String getIMG_PATH() {return IMG_PATH;}
 }

@@ -11,11 +11,21 @@ import com.cvut.src.view.GameView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
+
+/**
+ * The class represents the boss in the game
+ * @author ulcheyev
+ **/
 public class Boss extends Enemy {
     private final String IMG_PATH = "/boss1.png";
     private BossType type;
     private MyProgressBar hpBar;
 
+    /**
+     * Initialize Boss. Determination of maximum values for movement. Creation boss hp bar.
+     * @param controller game controller
+     * @param type type of the boss
+     **/
     public Boss(GameController controller, BossType type) {
         super(controller);
         this.type = type;
@@ -46,18 +56,6 @@ public class Boss extends Enemy {
     }
 
 
-    public BossType getType() {
-        return type;
-    }
-    public void setType(BossType type) {
-        this.type = type;
-    }
-    public MyProgressBar getHpBar() {
-        return hpBar;
-    }
-
-
-
     @Override
     public void update() {
         hpBar.setX(imgParam.getX() - 27);
@@ -78,6 +76,9 @@ public class Boss extends Enemy {
         return rectangle;
     }
 
+    /**
+     * The method creates the logic of the boss's movement.
+     **/
     public void enemyMoveLogic() {
         if (acccessToMoveDependingOnTheHour == true) {
             if (route == true) {
@@ -98,6 +99,9 @@ public class Boss extends Enemy {
         }
     }
 
+    /**
+     * The method allows to the boss to fire with different ammo.
+     **/
     public void enemyShoot() {
         if (stopShoot == false) {
             shootDelay = 1000;
@@ -119,5 +123,26 @@ public class Boss extends Enemy {
                 lastShoot = System.currentTimeMillis();
             }
         }
+    }
+
+    /** Returns boss type
+     * @return boss type
+     **/
+    public BossType getType() {
+        return type;
+    }
+
+    /** Sets boss type
+     * @param  type boss type
+     **/
+    public void setType(BossType type) {
+        this.type = type;
+    }
+
+    /** Returns boss hp bar
+     * @return   boss hp bar
+     **/
+    public MyProgressBar getHpBar() {
+        return hpBar;
     }
 }

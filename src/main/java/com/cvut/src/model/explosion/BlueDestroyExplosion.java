@@ -3,11 +3,19 @@ package com.cvut.src.model.explosion;
 import com.cvut.src.view.components.Renderparam;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
-
+/**
+ * The class represents a Blue Destroy Explosion that appears after the destruction of the object
+ * @author ulcheyev
+ **/
 public class BlueDestroyExplosion extends Explosion {
     private final String IMG_PATH = "/blue_explosion.png";
 
 
+    /**
+     * Initialize Blue Destroy Explosion
+     * @param x x coordinate
+     * @param y y coordinate
+     **/
     public BlueDestroyExplosion(double x, double y) {
         this.renderParam = new Renderparam();
         this.renderParam.setX(x);

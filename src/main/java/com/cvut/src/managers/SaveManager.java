@@ -1,19 +1,24 @@
 package com.cvut.src.managers;
-
-import com.cvut.src.model.Space;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * A class used to work with a file with game saves
+ * @author ulcheyev
+ **/
 public class SaveManager {
+
         private final static Logger logger = Logger.getLogger(SaveManager.class.getName());
         private static ObjectOutputStream out;
         private static ObjectInputStream in;
 
-
+        /**
+         * The method saves the object to a file
+         * @param object object to save
+         **/
         public static void save(Serializable object){
                 clearFile();
                 try{
@@ -26,6 +31,10 @@ public class SaveManager {
                 }
         }
 
+        /**
+         * The method return loaded object from saves file
+         * @return  loaded object from file
+         **/
         public static Object load(){
                 try{
                         in = new ObjectInputStream(Files.newInputStream(Paths.get("saves.txt")));
@@ -38,7 +47,10 @@ public class SaveManager {
                 return null;
         }
 
-
+        /**
+         * The method returns the status of the empty file
+         * @return  true - file is empty, false - file is not empty
+         **/
         public static boolean isEmpty() {
                 try{
                         BufferedReader br = new BufferedReader(new FileReader("saves.txt"));
@@ -53,6 +65,7 @@ public class SaveManager {
                 return true;
         }
 
+        //Clear file before writing
         private static void clearFile(){
                 try{
                         FileWriter fw = new FileWriter("saves.txt", false);
