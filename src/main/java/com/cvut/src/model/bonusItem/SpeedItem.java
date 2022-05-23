@@ -1,6 +1,7 @@
 package com.cvut.src.model.bonusItem;
 
 import com.cvut.src.controller.GameController;
+import com.cvut.src.model.player.ship.PlayerShip;
 import com.cvut.src.view.components.Renderparam;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -8,13 +9,17 @@ import javafx.scene.image.ImageView;
 import java.io.Serializable;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Class representing the Speed bonus item
  * @author ulcheyev
  **/
 public class SpeedItem extends Item implements Serializable {
-    private  final String IMG_PATH = "/items/Speed_Bonus.png";
+    private final static Logger logger = Logger.getLogger(GameController.class.getName());
+
+
     private transient Timer timer;
     private  double originalShipSpeed;
 
@@ -25,6 +30,7 @@ public class SpeedItem extends Item implements Serializable {
      * @param y y coordinate to spawn
      **/
     public SpeedItem(GameController controller, double x, double y){
+        super("/items/Speed_Bonus.png");
         this.controller = controller;
         this.img = new Image(getClass().getResourceAsStream(IMG_PATH));
         this.renderParam = new Renderparam(x, y);
@@ -47,11 +53,7 @@ public class SpeedItem extends Item implements Serializable {
         }
     }
 
-    /** Returns image path
-     * @return image path
-     **/
-    @Override
-    public String getIMG_PATH() {return IMG_PATH;}
+
 
 
     /** Returns player speed to original before speed item bonus passed
@@ -62,9 +64,11 @@ public class SpeedItem extends Item implements Serializable {
             @Override
             public void run() {
                 try {
-                    controller.getGameSpace().getPlayerShip().setSpeedMove(originalShipSpeed);
+                    PlayerShip ship  = controller.getGameSpace().getPlayerShip();
+                    ship.setSpeedMove(originalShipSpeed);
                 }catch (NullPointerException e){
                     e.printStackTrace();
+                    logger.log(Level.SEVERE, "Player ship is null");
                 }
 
             }

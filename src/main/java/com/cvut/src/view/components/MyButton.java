@@ -14,8 +14,8 @@ import javafx.scene.text.Font;
  **/
 public class MyButton extends Button {
 
-    private final String FONT_PATH = "/menu_res/Prototype.ttf";
-    private final String IMG_PATH = "/menu_res/button.png";
+    private static final String FONT_PATH = "/menu_res/Prototype.ttf";
+    private static final String IMG_PATH = "/menu_res/button.png";
     private Renderparam position;
     private Image img = new Image(getClass().getResourceAsStream(IMG_PATH));
     BackgroundImage backGroundImage = new BackgroundImage(img, BackgroundRepeat.NO_REPEAT,

@@ -17,7 +17,7 @@ import javafx.scene.shape.Rectangle;
  * @author ulcheyev
  **/
 public class Boss extends Enemy {
-    private final String IMG_PATH = "/boss1.png";
+    private static final String IMG_PATH = "/boss1.png";
     private BossType type;
     private MyProgressBar hpBar;
 

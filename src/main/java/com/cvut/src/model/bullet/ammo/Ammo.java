@@ -1,4 +1,5 @@
 package com.cvut.src.model.bullet.ammo;
+import com.cvut.src.model.GameObject;
 import com.cvut.src.model.bullet.Bullet;
 import com.cvut.src.view.components.Renderparam;
 import javafx.scene.canvas.GraphicsContext;

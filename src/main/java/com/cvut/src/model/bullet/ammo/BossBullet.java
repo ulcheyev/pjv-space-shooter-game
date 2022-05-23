@@ -11,7 +11,7 @@ import javafx.scene.shape.Rectangle;
  * @author ulcheyev
  **/
 public class BossBullet extends Ammo {
-    private final String IMG_PATH = "/boss_second_shoot.png";
+    private static final String IMG_PATH = "/boss_second_shoot.png";
 
     /**
      * Boss bullet initialize

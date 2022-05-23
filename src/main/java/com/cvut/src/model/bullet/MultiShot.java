@@ -9,6 +9,7 @@ import com.cvut.src.model.player.ship.PlayerShip;
  * @author ulcheyev
  **/
 public class MultiShot implements Runnable {
+    private final int FIRE_RATE_MULTISHOT = 60;
     private GameController controller;
     private PlayerShip ship;
 
@@ -22,7 +23,7 @@ public class MultiShot implements Runnable {
     }
     private void multiShot(){
         controller.playSound("multi_shot");
-        for(int i= 0; i < 60; i++){
+        for(int i= 0; i < FIRE_RATE_MULTISHOT; i++){
 
             controller.getGameSpace().playerBulletsAddBullet(new MyBullet(controller,0.03,
                                                         ship.getImgParam().getX() + ship.getImgParam().getWidth()/2,
@@ -30,7 +31,8 @@ public class MultiShot implements Runnable {
             try {
                 Thread.sleep(100);
             }catch (InterruptedException e){
-                System.out.println(e);
+                controller.showErrorMessage("Problem with game thread while multi shooting");
+                e.printStackTrace();
             }
         }
         controller.setAllowToFillMultiShotBar(true);

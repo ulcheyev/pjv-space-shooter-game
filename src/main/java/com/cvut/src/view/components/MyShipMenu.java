@@ -1,6 +1,7 @@
 package com.cvut.src.view.components;
 
 import com.cvut.src.controller.GameController;
+import com.cvut.src.managers.SpaceConfigurationData;
 import com.cvut.src.model.enemy.BossType;
 import com.cvut.src.model.player.ship.PlayerShip;
 
@@ -98,8 +99,9 @@ public class MyShipMenu {
                 if(choosen) {
                     removeBorder(firstBox);
                     removeBorder(secondBox);
-                    controller.createNewGame(BossType.TITAN, 1 , 10);
-
+                    controller.clearScreen();
+                    controller.resetPlayerShipInventory();
+                    controller.createNewGameParametrizedByJson(1);
                     controller.setGameScene();
                     controller.startGame();
 

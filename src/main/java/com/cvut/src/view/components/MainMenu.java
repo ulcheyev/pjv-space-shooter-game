@@ -2,6 +2,7 @@ package com.cvut.src.view.components;
 import com.cvut.src.controller.GameController;
 import com.cvut.src.managers.SaveData;
 import com.cvut.src.managers.SaveManager;
+import com.cvut.src.managers.SpaceConfigurationData;
 import com.cvut.src.model.enemy.BossType;
 import com.cvut.src.view.GameView;
 import javafx.application.Platform;
@@ -89,7 +90,7 @@ public class MainMenu{
         loadButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                if (SaveManager.isEmpty() == false) {
+                if (controller.isSavesFileEmpty() == false) {
                     controller.loadGame();
                 } else {
                     controller.showErrorMessage("No saves found :(");
@@ -113,9 +114,9 @@ public class MainMenu{
                     controller.setMyShipMenu();
                 }else{
                     controller.clearScreen();
-                    controller.createNewGame(BossType.TITAN, 1 ,10);
+                    controller.resetPlayerShipInventory();
+                    controller.createNewGameParametrizedByJson(1);
                     controller.setGameScene();
-//                    controller.setPlayerShip(controller.getChoosenShip());
                     controller.startGame();
                 }
             }

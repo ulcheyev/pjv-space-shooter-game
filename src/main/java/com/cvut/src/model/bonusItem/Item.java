@@ -13,6 +13,7 @@ import java.io.Serializable;
  * @author ulcheyev
  **/
 public abstract class Item implements Serializable, GameObject {
+    public final String IMG_PATH;
     protected transient Image img;
     protected transient ImageView view;
     protected Renderparam renderParam;
@@ -20,6 +21,9 @@ public abstract class Item implements Serializable, GameObject {
     protected double attribute;
     protected int quantity;
 
+    protected Item(String path){
+        this.IMG_PATH = path;
+    }
     /**
      * The method update object parameters:
      * 1. The movement of the object relative to the speed of movement background
@@ -55,10 +59,6 @@ public abstract class Item implements Serializable, GameObject {
         return rectangle;
     }
 
-    /** Returns image path
-     * @return image path
-     **/
-    public abstract String getIMG_PATH();
 
     /** Returns bonus item attribute
      * @return bonus item attribute
@@ -95,9 +95,21 @@ public abstract class Item implements Serializable, GameObject {
      **/
     public int getQuantity() {return quantity;}
 
+    /** Sets quantity of this item in inventory
+     * @param  quantity of this item in inventory
+     **/
+    public void setQuantity(int quantity) {this.quantity = quantity;}
+
     /** Returns Renderparam object
      * @return Renderparam object
      **/
     public Renderparam getRenderParam() {return renderParam;}
+
+    /** Returns image path
+     * @return image path
+     **/
+//    public String getImg_path(){
+//        return this.img_path;
+//    }
 
 }

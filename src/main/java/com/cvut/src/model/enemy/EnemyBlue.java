@@ -10,7 +10,7 @@ import javafx.scene.shape.Rectangle;
  * @author ulcheyev
  **/
 public class EnemyBlue extends Enemy {
-	private final String IMG_PATH = "/enemy_blue.png";
+	private static final String IMG_PATH = "/enemy_blue.png";
 
 	//Moving diagonally
     private double dirY = 0;

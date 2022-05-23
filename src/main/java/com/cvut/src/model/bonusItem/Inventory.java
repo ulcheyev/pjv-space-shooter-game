@@ -5,6 +5,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class representing the inventory where bonus items are stored
@@ -12,8 +13,7 @@ import java.util.ArrayList;
  **/
 
 public class Inventory implements Serializable{
-    private ArrayList<Item> items;
-
+    private List<Item> items;
 
     private  HPItem hp;
     private  SpeedItem speed;
@@ -62,6 +62,15 @@ public class Inventory implements Serializable{
     }
 
     /**
+     * Resets items quantity
+     **/
+    public void resetItemsQuantity(){
+      for(int i = 0; i < items.size(); i++){
+          items.get(i).setQuantity(0);
+      }
+    }
+
+    /**
      * Method activates  bonuses depending on the keys pressed
      * @param e key event
      **/
@@ -81,7 +90,7 @@ public class Inventory implements Serializable{
      * Method set items to inventory
      * @param items to set
      **/
-    public void setItems(ArrayList<Item> items) {
+    public void setItems(List<Item> items) {
        for (Item item: items){
            if (item instanceof HPItem) {
                hp.quantity = item.getQuantity();
@@ -141,5 +150,5 @@ public class Inventory implements Serializable{
      * Returns all items  from inventory
      * @return  all items quantity
      **/
-    public ArrayList<Item> getItems() {return items;}
+    public List<Item> getItems() {return items;}
 }

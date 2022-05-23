@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cf7561f4-d6c8-44c9-9f6a-5a9908d2e8bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceHunter.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/controller/GameController.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/controller/GameController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/controller/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/controller/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/controller/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/controller/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/AudioManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/AudioManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/SaveData.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/SaveData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/SaveManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/SaveManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/managers/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/GameObject.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/GameObject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/Space.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/Space.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/HPItem.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/HPItem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/Inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/Inventory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/Item.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/Item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/ShootItem.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/ShootItem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/SpeedItem.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/SpeedItem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bonusItem/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/Bullet.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/Bullet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/MultiShot.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/MultiShot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/Ammo.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/Ammo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/BossBullet.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/BossBullet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/EnemyBullet.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/EnemyBullet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/MyBullet.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/MyBullet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/ammo/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/EnemyRocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/EnemyRocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/PlayerRocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/PlayerRocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/Rocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/Rocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/bullet/rocket/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/Boss.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/Boss.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/BossType.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/BossType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/Enemy.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/Enemy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/EnemyBlue.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/EnemyBlue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/EnemyGreen.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/EnemyGreen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/EnemyYellow.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/EnemyYellow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/enemy/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/BlueDestroyExplosion.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/BlueDestroyExplosion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/Explosion.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/Explosion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/ExplosionType.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/ExplosionType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/HitExplosion.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/HitExplosion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/RedDestroyExplosion.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/RedDestroyExplosion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/explosion/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/PlayerShield.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/PlayerShield.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/PlayerShip.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/PlayerShip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/ShipType.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/ShipType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/model/player/ship/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/GameView.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/GameView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/InventoryItemView.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/InventoryItemView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MainMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MainMenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyBackground.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyBackground.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyButton.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyButton.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyProgressBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyProgressBar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyShipMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/MyShipMenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/Renderparam.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/Renderparam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/components/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/com/cvut/src/view/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/module-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/com.cvut.spacehunter/module-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves.txt" beforeDir="false" afterPath="$PROJECT_DIR$/saves.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/managers/SaveData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/managers/SaveData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/managers/SaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/managers/SaveManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/HPItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/HPItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/ShootItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/ShootItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/SpeedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bonusItem/SpeedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/MultiShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/MultiShot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/Ammo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/Ammo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/BossBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/BossBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/EnemyBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/EnemyBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/MyBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/ammo/MyBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/rocket/EnemyRocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/rocket/EnemyRocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/rocket/PlayerRocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/bullet/rocket/PlayerRocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/BossType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/BossType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/EnemyBlue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/EnemyBlue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/EnemyGreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/EnemyGreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/EnemyYellow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/enemy/EnemyYellow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/BlueDestroyExplosion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/BlueDestroyExplosion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/Explosion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/Explosion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/HitExplosion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/HitExplosion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/RedDestroyExplosion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/explosion/RedDestroyExplosion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/player/PlayerShield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/player/PlayerShield.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/player/ship/PlayerShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/model/player/ship/PlayerShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/InventoryItemView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/InventoryItemView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/MyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/MyButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/MyShipMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cvut/src/view/components/MyShipMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpaceHunter-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpaceHunter-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/controller/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/managers/SaveData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/managers/SaveData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/managers/SaveManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/managers/SaveManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/Space$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/Space$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/Space.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/Space.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/HPItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/HPItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/ShootItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/ShootItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/SpeedItem$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/SpeedItem$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/SpeedItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bonusItem/SpeedItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/MultiShot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/MultiShot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/Ammo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/Ammo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/BossBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/BossBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/EnemyBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/EnemyBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/MyBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/ammo/MyBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/rocket/EnemyRocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/rocket/EnemyRocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/rocket/PlayerRocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/bullet/rocket/PlayerRocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/Boss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/BossType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/BossType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/EnemyBlue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/EnemyBlue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/EnemyGreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/EnemyGreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/EnemyYellow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/enemy/EnemyYellow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/BlueDestroyExplosion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/BlueDestroyExplosion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/Explosion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/Explosion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/HitExplosion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/HitExplosion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/RedDestroyExplosion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/explosion/RedDestroyExplosion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/player/PlayerShield.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/player/PlayerShield.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/model/player/ship/PlayerShip.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/model/player/ship/PlayerShip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/GameView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/InventoryItemView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/InventoryItemView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cvut/src/view/components/MyShipMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="29PCFiXto84Lu62p88DzFwRYLRN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OMEN\Desktop\SpaceHunter\ulcheyev" />
+      <recent name="C:\Users\OMEN\Desktop\SpaceHunter\ulcheyev\src" />
+      <recent name="C:\Users\OMEN\Desktop\SpaceHunter\ulcheyev\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="JsonManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cvut.src.managers.JsonManager" />
+      <module name="SpaceHunter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cvut.src.managers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cvut.src.Main" />
+      <module name="SpaceHunter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cvut.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpaceHunter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.JsonManager" />
+        <item itemvalue="JUnit.Tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf7561f4-d6c8-44c9-9f6a-5a9908d2e8bc" name="Changes" comment="" />
+      <created>1653005235503</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653005235503</updated>
+      <workItem from="1653005238988" duration="39000" />
+      <workItem from="1653005432451" duration="26000" />
+      <workItem from="1653056852871" duration="4159000" />
+      <workItem from="1653065766795" duration="349000" />
+      <workItem from="1653074265245" duration="6205000" />
+      <workItem from="1653085171795" duration="302000" />
+      <workItem from="1653085915825" duration="3212000" />
+      <workItem from="1653131865132" duration="4353000" />
+      <workItem from="1653167261325" duration="829000" />
+      <workItem from="1653237985446" duration="17787000" />
+      <workItem from="1653329441345" duration="913000" />
+      <workItem from="1653332083507" duration="7000" />
+      <workItem from="1653332103970" duration="15000" />
+      <workItem from="1653332140312" duration="13000" />
+      <workItem from="1653332186465" duration="145000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

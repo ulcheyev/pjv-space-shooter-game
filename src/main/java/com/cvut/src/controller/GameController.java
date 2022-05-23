@@ -1,7 +1,5 @@
 package com.cvut.src.controller;
-import com.cvut.src.managers.AudioManager;
-import com.cvut.src.managers.SaveData;
-import com.cvut.src.managers.SaveManager;
+import com.cvut.src.managers.*;
 import com.cvut.src.model.*;
 import com.cvut.src.model.bonusItem.Inventory;
 import com.cvut.src.model.enemy.BossType;
@@ -48,6 +46,9 @@ public class GameController {
     //A variable for monitoring the state of the game. True - not finished yet, False - finished
     private boolean gameState = true;
 
+    //Managers
+    private SaveManager saveManager;
+
     /**
      * Initializing the GameController class
      * @param stage - accepts the main stage
@@ -56,6 +57,7 @@ public class GameController {
         logger.log(Level.INFO, "Game controller initialize");
         gameView = new GameView(this, stage);
         this.gameScene = gameView.getGameScene();
+        saveManager = new SaveManager(this);
 
         theme = new AudioManager("theme");
         theme.setInfiniteLoop();
@@ -69,22 +71,10 @@ public class GameController {
 
     /**
      * The method initializes a new game
-     * @param level level
+     * @param type boss type
      * @param enemiesWave  number of waves of enemies
      * @param enemiesQuantity the number of enemies in each wave
      **/
-    public void createNewGame (int level, int enemiesWave, int enemiesQuantity){
-        logger.log(Level.INFO, "New game is created");
-        if(level == 1) {
-            gameSpace = new Space(this, BossType.PREDATOR, enemiesWave, enemiesQuantity);
-        }if(level == 2){
-            gameSpace = new Space(this, BossType.TITAN, enemiesWave, enemiesQuantity);
-        }
-        gameView.clearGameScreen();
-        gameView.drawInventory(gameSpace.getPlayerInventory().getItems());
-        gameView.setGameBackgroundImage(getSpaceBackground());
-        gameView.updateBars();
-    }
 
     public void createNewGame (BossType type, int enemiesWave, int enemiesQuantity){
         logger.log(Level.INFO, "New game is created");
@@ -95,6 +85,20 @@ public class GameController {
         gameView.updateBars();
         gameView.getGameScene().setOnKeyPressed(pressed);
         gameView.getGameScene().setOnKeyReleased(released);
+    }
+
+    /**
+     * The method initializes a new game by parameters in JSON file
+     * @param level - level of the game. Must match the data from JSON file.
+     **/
+    public void createNewGameParametrizedByJson(int level){
+        logger.log(Level.INFO, "New game is created");
+        SpaceConfigurationData data = readFromJson();
+        if(level == 1){
+            createNewGame(data.getBossTypeFirstLevel(), data.getEnemiesWaveFirstLevel(), data.getEnemiesQuantityFirstLevel());
+        }if(level == 2){
+            createNewGame(data.getBossTypeSecondLevel(), data.getEnemiesWaveSecondLevel(), data.getEnemiesQuantitySecondLevel());
+        }
     }
 
     /**
@@ -174,24 +178,22 @@ public class GameController {
     /**
      * The method save game parameters : Player Ship Type, Boss Type, Item Quantity
      **/
-    public void saveGame(){
+    public void saveGame() {
         SaveData data = new SaveData();
-        data.shipType = choosenShip.getType();
-        data.bossType = gameSpace.getBoss().getType();
-        data.items = gameSpace.getPlayerInventory().getItems();
-//        data.inventory = getPlayerInventory();
-        SaveManager.save(data);
+        data.setShipType(choosenShip.getType());
+        data.setBossType(gameSpace.getBoss().getType());
+        data.setItems(gameSpace.getPlayerInventory().getItems());
+        saveManager.save(data);
     }
-
     /**
      * The method load game parameters and set them
      **/
     public void loadGame(){
-        SaveData data = (SaveData) SaveManager.load();
+        SaveData data = (SaveData) saveManager.load();
         clearScreen();
-        setChoosenShip(new PlayerShip(this, data.shipType));
-        choosenShip.getInventory().setItems(data.items);
-        createNewGame(data.bossType, 0 , 0);
+        setChoosenShip(new PlayerShip(this, data.getShipType()));
+        choosenShip.getInventory().setItems(data.getItems());
+        createNewGame(data.getBossType(), 0 , 0);
 
         setGameScene();
         startGame();
@@ -287,6 +289,22 @@ public class GameController {
         choosenShip.resetShield();
     }
 
+    /**Reads from JSON file and returns readed data
+     * @return readed data from JSON file
+     **/
+    public SpaceConfigurationData readFromJson(){
+        JsonManager jsonManager = new JsonManager(this);
+        jsonManager.parseJSON();
+        return jsonManager.getData();
+    }
+
+    /**Resets player's ship inventory
+     **/
+    public void resetPlayerShipInventory(){
+        choosenShip.getInventory().resetItemsQuantity();
+    }
+
+
     //PROGRESS BAR GETTERS/SETTERS
 
     /**Sets progress to the game pane
@@ -359,6 +377,8 @@ public class GameController {
      * **/
     public void showErrorMessage(String text){gameView.showErrorMessage(text);}
 
+    public void showMessageOnPane(String text){gameView.showMessageOnPane(text);}
+
     /**Removes item from game pane
      * @param node - item to remove
      * **/
@@ -402,4 +422,25 @@ public class GameController {
      * @return selected ship
      * **/
     public PlayerShip getChoosenShip() {return choosenShip;}
+
+    /** Returns game level
+     * @return game level
+     * **/
+    public int getSpaceLevel(){
+        return gameSpace.getLevel();
+    }
+
+    /** Returns a boolean value meaning the file is empty
+     * @return a boolean value: true - file is empty, false - not empty
+     * **/
+    public boolean isSavesFileEmpty(){
+        return saveManager.isEmpty();
+    }
+
+    /**Increases the level of the game
+     **/
+    public void gameLevelUp(){
+        gameSpace.levelUp();
+    }
+
 }

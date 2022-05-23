@@ -11,7 +11,7 @@ import javafx.scene.shape.Rectangle;
  * @author ulcheyev
  **/
 public class PlayerRocket extends Rocket {
-    private final String IMG_PATH = "/player_rocket.png";
+    private static final String IMG_PATH = "/player_rocket.png";
 
     /**
      * Initialize Player Rocket

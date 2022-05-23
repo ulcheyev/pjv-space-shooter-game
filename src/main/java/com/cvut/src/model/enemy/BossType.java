@@ -5,7 +5,9 @@ package com.cvut.src.model.enemy;
  * @author ulcheyev
  **/
 public enum BossType {
-    TITAN("/boss1.png", 1, 2, 1), PREDATOR("/bossn.png", 1, 2, 1);
+    TITAN("/boss1.png", 1, 2, 1),
+    PREDATOR("/bossn.png", 1, 2, 2),
+    GIGANT("/boss2.png", 1, 1, 1);
 
     private String imgPath;
     private double damage;
@@ -25,6 +27,7 @@ public enum BossType {
         this.health = health;
         this.moveSpeed = moveSpeed;
     }
+    BossType(){}
 
     /** Returns image of this boss
      * @return boss's image

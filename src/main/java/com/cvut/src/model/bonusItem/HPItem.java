@@ -13,7 +13,6 @@ import java.util.logging.Logger;
  * @author ulcheyev
  **/
 public class HPItem extends Item{
-    private final String IMG_PATH = "/items/HP_Bonus.png";
 
     /**
      * Initialize HP bonus item
@@ -22,6 +21,7 @@ public class HPItem extends Item{
      * @param y y coordinate to spawn
      **/
     public HPItem(GameController controller, double x, double y){
+        super("/items/HP_Bonus.png");
         this.controller = controller;
         this.img = new Image(getClass().getResourceAsStream(IMG_PATH));
         this.renderParam = new Renderparam(x, y);
@@ -46,10 +46,6 @@ public class HPItem extends Item{
         }
     }
 
-    /** Returns image path
-     * @return image path
-     **/
-    public String getIMG_PATH() {return IMG_PATH;}
 
 
 }

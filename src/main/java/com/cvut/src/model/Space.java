@@ -10,6 +10,7 @@ import com.cvut.src.model.player.ship.PlayerShip;
 import com.cvut.src.view.components.MyBackground;
 import javafx.scene.canvas.GraphicsContext;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.logging.*;
 
@@ -27,16 +28,17 @@ public class Space {
     private MyBackground background;
     private PlayerShip playerShip;
     private PlayerShield playerShield;
-    private ArrayList<Bullet> playerBullets;
-    private ArrayList<Bullet> enemyBullets;
-    private ArrayList<Enemy> enemies;
-    private ArrayList<Explosion> explosions;
-    private ArrayList<Item> items;
+    private List<Bullet> playerBullets;
+    private List<Bullet> enemyBullets;
+    private List<Enemy> enemies;
+    private List<Explosion> explosions;
+    private List<Item> items;
     private Inventory playerInventory;
     private Boss boss;
 
     private int enemiesWave;
     private int enemiesQuantity;
+    private static int level = 1;
 
     //A variable for monitoring the boss health.
     private double bossHealthCheck;
@@ -78,23 +80,19 @@ public class Space {
             playerShip.paint(graphicsContext);
             playerShield.paint(graphicsContext);
         }
+        parametrizedPaintMethod(playerBullets, graphicsContext);
+        parametrizedPaintMethod(enemyBullets, graphicsContext);
+        parametrizedPaintMethod(enemies, graphicsContext);
+        parametrizedPaintMethod(explosions, graphicsContext);
+        parametrizedPaintMethod(items, graphicsContext);
+    }
 
-        for (int i = 0; i < playerBullets.size(); i++) {
-            playerBullets.get(i).paint(graphicsContext);
-        }
-        for (int i = 0; i < enemyBullets.size(); i++) {
-            enemyBullets.get(i).paint(graphicsContext);
-        }
-        for (int i = 0; i < enemies.size(); i++) {
-            if( enemies.get(i) != null) {
-                enemies.get(i).paint(graphicsContext);
+    private void parametrizedPaintMethod(List objects, GraphicsContext graphicsContext){
+        for(int i = 0; i < objects.size(); i++){
+            if(objects.get(i) != null){
+                GameObject object = (GameObject) objects.get(i);
+                object.paint(graphicsContext);
             }
-        }
-        for (int i = 0; i < explosions.size(); i++) {
-            explosions.get(i).paint(graphicsContext);
-        }
-        for (int i = 0; i < items.size(); i++) {
-            items.get(i).paint(graphicsContext);
         }
     }
 
@@ -140,7 +138,7 @@ public class Space {
     //Update player ship
     //Checking the ship for collisions with enemy bullets.
     //Player ship health update
-    private void checkingPlayerShip(PlayerShip playerShip, ArrayList<Bullet> enemyBullets){
+    private void checkingPlayerShip(PlayerShip playerShip, List<Bullet> enemyBullets){
         for (int i = 0; i < enemyBullets.size(); i++) {
             if (checkCollision(playerShip, enemyBullets.get(i))) {
                 double explosionXcoord = enemyBullets.get(i).getImgParam().getX();
@@ -164,7 +162,7 @@ public class Space {
 
     //Update enemies
     //Checking enemies for collisions with the player's bullets
-    private void updateAndCheckingEnemies(ArrayList<Enemy> enemies, ArrayList<Bullet> playerBullets) {
+    private void updateAndCheckingEnemies(List<Enemy> enemies, List<Bullet> playerBullets) {
         for (int i = 0; i < enemies.size(); i++) {
             enemies.get(i).update();
             for (int j = 0; j < playerBullets.size(); j++){
@@ -187,7 +185,7 @@ public class Space {
 
     //SET GAME WIN
     //Destroy enemies
-    private void removeDestroyedEnemies(ArrayList<Enemy> enemies){
+    private void removeDestroyedEnemies(List<Enemy> enemies){
         for(int i = 0; i < enemies.size(); i++){
             if(enemies.get(i).getHealth() <= 0){
                 if(enemies.get(i).getClass() == Boss.class){
@@ -206,7 +204,7 @@ public class Space {
     }
 
     //Player bullet updating. Removing out-of-bounds bullets.
-    private void updatePlayerBullets(ArrayList<Bullet> playerBullets){
+    private void updatePlayerBullets(List<Bullet> playerBullets){
         for (int i = 0; i < playerBullets.size(); i++) {
             playerBullets.get(i).update();
             if (playerBullets.get(i).getImgParam().getY() < -50) {
@@ -217,7 +215,7 @@ public class Space {
     }
 
     //Enemies bullet updating. Removing out-of-bounds bullets.
-    private void updateEnemiesBullets(ArrayList<Bullet> enemyBullets){
+    private void updateEnemiesBullets(List<Bullet> enemyBullets){
         for (int i = 0; i < enemyBullets.size(); i++) {
             enemyBullets.get(i).update();
             if (enemyBullets.get(i).getImgParam().getY() > 1000) {
@@ -228,7 +226,7 @@ public class Space {
     }
 
     //Explosion updating
-    private void updateExplosions(ArrayList<Explosion> explosions) {
+    private void updateExplosions(List<Explosion> explosions) {
         for (int i = 0; i < explosions.size(); i++) {
             explosions.get(i).update();
             if (!explosions.get(i).getRun()) {
@@ -238,7 +236,7 @@ public class Space {
     }
 
     //Creating enemies
-    private void enemiesCreate(ArrayList<Enemy> enemies, int enemiesQuantity, int enemiesWave){
+    private void enemiesCreate(List<Enemy> enemies, int enemiesQuantity, int enemiesWave){
         if(enemies.size() == 0) {
             if (enemiesWave != 0){
                 this.enemiesWave--;
@@ -261,7 +259,7 @@ public class Space {
     }
 
     //Creating a boss
-    private void bossSpawn(ArrayList<Enemy> enemies){
+    private void bossSpawn(List<Enemy> enemies){
         playerBullets.clear();
         try {
             logger.log(Level.INFO, "Game save");
@@ -305,7 +303,7 @@ public class Space {
     }
 
     //Update items
-    private void updateItems(ArrayList<Item> items){
+    private void updateItems(List<Item> items){
         for(int i = 0; i < items.size(); i++){
             if(items.get(i).getAttribute() != 0) {
                 items.get(i).update();
@@ -366,6 +364,8 @@ public class Space {
         }
     }
 
+
+
     //Player ship getters and setters
     /**Returns player ship
      * @return Player ship
@@ -380,7 +380,7 @@ public class Space {
     /**Returns list of player bullets
      * @return list of player bullets
      **/
-    public ArrayList<Bullet> getPlayerBullets() {return this.playerBullets;}
+    public List<Bullet> getPlayerBullets() {return this.playerBullets;}
 
     /**Add bullet to player bullets list
      * @param  bullet bullet to add
@@ -400,10 +400,19 @@ public class Space {
     /**Returns list of inventory items
      * @return  list of items
      **/
-    public ArrayList<Item> getItems() {return items;}
+    public List<Item> getItems() {return items;}
 
 
+    /**Increases the level of the game
+     **/
+    public void levelUp(){
+        level++;
+    }
 
+    /**Returns level of the game
+     * @return level of the game
+     **/
+    public int getLevel() {return level;}
 
     //ENEMIES GETTERS AND SETTERS
 
@@ -436,7 +445,7 @@ public class Space {
     /**Returns list of enemies bullets
      * @return  List of enemies bullets
      **/
-    public ArrayList<Bullet> getEnemyBullets() {return enemyBullets;}
+    public List<Bullet> getEnemyBullets() {return enemyBullets;}
 
     /**Sets game state
      * @param  gameState game state to set. True-finished, False-not finished.

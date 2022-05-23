@@ -8,7 +8,21 @@ import javafx.scene.image.Image;
  * @author ulcheyev
  **/
 public class BlueDestroyExplosion extends Explosion {
-    private final String IMG_PATH = "/blue_explosion.png";
+    private static final String IMG_PATH = "/blue_explosion.png";
+
+    //Column quantity * Row quantity in sprite image
+    private static final int TOTAL_NUMBER_OF_FRAMES = 25;
+
+    private static final int TOTAL_COLUMN_NUMBER_IN_SPRITE_IMAGE = 5;
+    private static final float WIDTH_OF_THE_CUT_OUT_FRAGMENT = 201.3f;
+    private static final float HEIGHT_OF_THE_CUT_OUT_FRAGMENT = 201.3f;
+    private static final float WIDTH_OF_THE_IMAGE_FROM_ORIGINAL_IMAGE = 201.3f;
+    private static final float HEIGHT_OF_THE_IMAGE_FROM_ORIGINAL_IMAGE = 189;
+
+
+
+    private int numRows = 5 ;
+    private int numColumns = 5;
 
 
     /**
@@ -31,7 +45,7 @@ public class BlueDestroyExplosion extends Explosion {
             if(deltaTime >= duration){
                 frame++;
                 deltaTime = 0;
-                if(frame >= 26){ //pocet columnu
+                if(frame >= TOTAL_NUMBER_OF_FRAMES){
                     run = false;
                 }
             }
@@ -40,14 +54,14 @@ public class BlueDestroyExplosion extends Explosion {
 
     @Override
     public void paint(GraphicsContext graphics){
-        drawSpriteFrame(graphics, spriteImage, renderParam.getX(), renderParam.getY(), 5, frame, 201.3f, 201.3f);
+        drawSpriteFrame(graphics, spriteImage, renderParam.getX(), renderParam.getY(), TOTAL_COLUMN_NUMBER_IN_SPRITE_IMAGE, frame, WIDTH_OF_THE_CUT_OUT_FRAGMENT, HEIGHT_OF_THE_CUT_OUT_FRAGMENT);
     }
 
     @Override
-    protected void drawSpriteFrame(GraphicsContext graphics, Image spriteImage, double x, double y, int columnNumber, int frameNumber, float width, float height){
-        float frameX = (frame % columnNumber) * width;
-        float frameY = (frame / columnNumber) * height;
-        graphics.drawImage(spriteImage, frameX, frameY, width, 189, renderParam.getX(), renderParam.getY(), width, height);
+    protected void drawSpriteFrame(GraphicsContext graphics, Image spriteImage, double x, double y, int columnNumber, int frameNumber, double width, double height){
+        double frameX = (frameNumber % columnNumber) * width;
+        double frameY = (frameNumber / columnNumber) * height;
+        graphics.drawImage(spriteImage, frameX, frameY,WIDTH_OF_THE_IMAGE_FROM_ORIGINAL_IMAGE , HEIGHT_OF_THE_IMAGE_FROM_ORIGINAL_IMAGE, x, y, width, height);
     }
 
 

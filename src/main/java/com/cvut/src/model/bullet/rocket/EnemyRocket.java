@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
 public class EnemyRocket extends Rocket{
-    private final String IMG_PATH = "/boss_rocket.png";
+    private static final String IMG_PATH = "/boss_rocket.png";
 
     /**
      * Initialize Enemy Rocket

@@ -11,8 +11,7 @@ import javafx.scene.shape.Rectangle;
  * @author ulcheyev
  **/
 public class EnemyYellow extends Enemy {
-
-    private final String IMG_PATH = "/enemy_yellow.png";
+    private static final String IMG_PATH = "/enemy_yellow.png";
 
     /**
      * Initialize EnemyYellow. Determination of maximum values for movement. Set up parameters.

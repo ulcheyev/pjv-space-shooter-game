@@ -11,7 +11,7 @@ import javafx.scene.shape.Rectangle;
  * @author ulcheyev
  **/
 public class MyBullet extends Ammo {
-    private final String IMG_PATH = "/bullet4.png";
+    private static final String IMG_PATH = "/bullet4.png";
     private GameController controller;
 
     /**

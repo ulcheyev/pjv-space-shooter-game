@@ -5,6 +5,7 @@ module com.cvut.spacehunter {
     requires java.desktop;
     requires javafx.media;
     requires java.logging;
+    requires com.fasterxml.jackson.databind;
     exports com.cvut.src;
     exports com.cvut.src.model;
     exports com.cvut.src.view;
@@ -18,4 +19,6 @@ module com.cvut.spacehunter {
     exports com.cvut.src.model.bonusItem;
     exports com.cvut.src.model.bullet;
     exports com.cvut.src.model.player.ship;
+    exports com.cvut.src.managers;
+    opens com.cvut.src.managers;
 }

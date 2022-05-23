@@ -2,6 +2,7 @@ package com.cvut.src.view;
 import com.cvut.src.controller.GameController;
 import com.cvut.src.model.bonusItem.Item;
 import com.cvut.src.model.enemy.BossType;
+import com.cvut.src.model.player.ship.PlayerShip;
 import com.cvut.src.view.components.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -13,16 +14,21 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,6 +41,7 @@ public class GameView{
     public static final int GAME_HEIGHT = 1000;
     public static final int GAME_WIDTH = 1000;
     protected GameController controller;
+    private  Timer timer;
 
     //Graphic components
     private Stage mainStage;
@@ -124,17 +131,17 @@ public class GameView{
     private void createGameOverScreen(){
         Image gameOverImg = new Image(getClass().getResourceAsStream("/menu_res/lose.png"));
         ImageView view = new ImageView(gameOverImg);
-        MyButton exitButton = createExitButton();
+        MyButton menuButton = createMainMenuButton();
         MyButton playAgainButton = createPlayAgainButton();
 
-        exitButton.setLayoutY(150);
+        menuButton.setLayoutY(150);
         playAgainButton.setLayoutY(80);
-        exitButton.setLayoutX(50);
+        menuButton.setLayoutX(50);
         playAgainButton.setLayoutX(50);
 
         gameLoseScreen = new Group();
         gameLoseScreen.getChildren().add(playAgainButton);
-        gameLoseScreen.getChildren().add(exitButton);
+        gameLoseScreen.getChildren().add(menuButton);
         gameLoseScreen.getChildren().add(view);
     }
 
@@ -238,8 +245,13 @@ public class GameView{
             public void handle(MouseEvent event) {
                 removeLoseScreen();
                 controller.resetPlayerShipState();
-                controller.createNewGame(1 , 1, 1);
-//                controller.setGameSpace(null);
+                controller.resetPlayerShipInventory();
+                System.out.println(controller.getGameSpace().getLevel());
+                if(controller.getSpaceLevel() == 1) {
+                    controller.createNewGameParametrizedByJson(1);
+                }if(controller.getSpaceLevel() == 2){
+                    controller.createNewGameParametrizedByJson(2);
+                }
                 controller.startGame();
             }
         });
@@ -288,7 +300,8 @@ public class GameView{
             public void handle(MouseEvent event) {
                 controller.clearScreen();
                 controller.resetPlayerShipState();
-                controller.createNewGame(BossType.TITAN, 1 ,10);
+                controller.gameLevelUp();
+                controller.createNewGameParametrizedByJson(2);
             }
         });
         return nextButton;
@@ -309,6 +322,37 @@ public class GameView{
         return mainMenuButton;
     }
 
+    public void showMessageOnPane(String text){
+        timer = new Timer();
+        Group group = new Group();
+        Label textToShow = new Label(text);
+        textToShow.setLayoutX(680);
+        textToShow.setLayoutY(970);
+        textToShow.setTextFill(Color.WHITE);
+        textToShow.setFont(new Font("Arial", 17));
+        group.getChildren().add(textToShow);
+        gamePane.getChildren().add(group);
+        deleteNodeFromGamePaneTask(group);
+    }
+
+    private void deleteNodeFromGamePaneTask(Node node){
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                Platform.runLater(() -> {
+                    try {
+                        gamePane.getChildren().remove(node);
+                    }catch (NullPointerException e){
+                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "Node is null");
+                    }
+                });
+            }
+        }, 5000, 1000);
+    }
+
+
 
     /**
      * Updating states of bars (Hp, Multi shot)
@@ -322,7 +366,7 @@ public class GameView{
      * Draw inventory on game pane with given list of items
      * @param items items to draw
      **/
-    public void drawInventory(ArrayList<Item> items){
+    public void drawInventory(List<Item> items){
         Group inventory = new Group();
         for(int i = 0; i < items.size(); i++){
             InventoryItemView itemView = new InventoryItemView(items.get(i), controller);

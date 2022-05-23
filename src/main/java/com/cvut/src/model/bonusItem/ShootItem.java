@@ -13,7 +13,6 @@ import java.io.Serializable;
  * @author ulcheyev
  **/
 public class ShootItem extends Item {
-    private  final String IMG_PATH = "/items/Rocket_Bonus.png";
 
     /**
      * Initialize Shoot bonus item
@@ -23,6 +22,7 @@ public class ShootItem extends Item {
      * @param damage damage of this bonus item
      **/
     public ShootItem(GameController controller, double x, double y, double damage){
+        super("/items/Rocket_Bonus.png");
         this.controller = controller;
         this.img = new Image(getClass().getResourceAsStream(IMG_PATH));
         this.renderParam = new Renderparam(x, y);
@@ -47,9 +47,6 @@ public class ShootItem extends Item {
 
     }
 
-    /** Returns image path
-     * @return image path
-     **/
-    @Override
-    public String getIMG_PATH() {return IMG_PATH;}
+
+
 }

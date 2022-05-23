@@ -15,7 +15,16 @@ import java.io.Serializable;
  * @author ulcheyev
  **/
 public class PlayerShield implements Serializable, GameObject {
-    private final String IMG_PATH = "/shield.png";
+
+    private static final String IMG_PATH = "/shield.png";
+
+    //Column quantity * Row quantity in sprite image
+    private static final int TOTAL_NUMBER_OF_FRAMES = 25;
+
+    private static final int TOTAL_COLUMN_NUMBER_IN_SPRITE_IMAGE = 5;
+
+
+
     private transient GameController controller;
     private transient Image spriteImage;
 
@@ -54,7 +63,7 @@ public class PlayerShield implements Serializable, GameObject {
             if (deltaTime >= duration) {
                 frame++;
                 deltaTime = 0;
-                if (frame >= 31) {
+                if (frame >= TOTAL_NUMBER_OF_FRAMES) {
                     frame = 0;
                     start =false;
                 }
@@ -70,7 +79,9 @@ public class PlayerShield implements Serializable, GameObject {
         if(start) {
             drawSpriteFrame(graphics, spriteImage, controller.getGameSpace().getPlayerShip().getImgParam().getX() -
                             controller.getGameSpace().getPlayerShip().getImgParam().getHeight() / 2 + 15,
-                    controller.getGameSpace().getPlayerShip().getImgParam().getY() - 28, 5, frame, frameWidth, frameHeight);
+                         controller.getGameSpace().getPlayerShip().getImgParam().getY() - 28,
+                            TOTAL_COLUMN_NUMBER_IN_SPRITE_IMAGE,
+                            frame, frameWidth, frameHeight);
         }
     }
 
@@ -88,7 +99,7 @@ public class PlayerShield implements Serializable, GameObject {
     public void drawSpriteFrame(GraphicsContext graphics, Image spriteImage, double x, double y, int columnNumber, int frameNumber, double width, double height){
         double frameX = (frameNumber % columnNumber) * width;
         double frameY = (frameNumber / columnNumber) * height;
-        graphics.drawImage(spriteImage, frameX, frameY, frameWidth, frameHeight, x, y, frameWidth + 30, frameHeight + 30);
+        graphics.drawImage(spriteImage, frameX, frameY, width, height, x, y, width + 30, height + 30);
     }
 
 

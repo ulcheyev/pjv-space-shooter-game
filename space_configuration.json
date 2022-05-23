@@ -1,0 +1,9 @@
+{
+  "//COMMENT__: ALLOWED TYPES OF BOSSES: GIGANT, TITAN, PREDATOR":"",
+  "bossTypeFirstLevel" : "PREDATOR",
+  "enemiesQuantityFirstLevel" : 3,
+  "enemiesWaveFirstLevel" : 2,
+  "bossTypeSecondLevel" : "GIGANT",
+  "enemiesQuantitySecondLevel" : 5,
+  "enemiesWaveSecondLevel" : 5
+}

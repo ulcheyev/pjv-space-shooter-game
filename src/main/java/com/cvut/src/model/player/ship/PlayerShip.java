@@ -23,7 +23,6 @@ import java.io.Serializable;
  * @author ulcheyev
  **/
 public  class PlayerShip implements Serializable, GameObject {
-
     private transient GameController controller;
 
     protected  PlayerShield shield;

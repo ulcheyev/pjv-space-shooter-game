@@ -48,7 +48,7 @@ public class InventoryItemView {
         label.setFont(Font.font("Courier", FontWeight.BOLD, 15)); // set to Label
         label.setTextFill(Color.WHITE);
         label.setBackground(new Background(new BackgroundFill(Color.GREEN, new CornerRadii(10), null)));
-        itemInInventory.getChildren().add(new ImageView(new Image(getClass().getResourceAsStream(item.getIMG_PATH()))));
+        itemInInventory.getChildren().add(new ImageView(new Image(getClass().getResourceAsStream(item.IMG_PATH))));
         itemInInventory.getChildren().add(label);
         label.setText(String.valueOf(item.getQuantity()));
         itemInInventory.setLayoutY(item.getRenderParam().getY());
